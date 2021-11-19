@@ -11,7 +11,7 @@ const forecast = (lat, long, callback)=>{
             // callback(undefined, 'In ' + body.location.region + ' temperature is ' + body.current.temperature + ' and humidity is ' + body.current.humidity);
             callback(undefined, {
                 region: body.location.region,
-                forecast: 'In ' + body.location.region + ' temperature is ' + body.current.temperature + ' and humidity is ' + body.current.humidity
+                forecast: 'In ' + body.location.region + ' temperature is ' + body.current.temperature + ' and humidity is : ' + body.current.humidity + ' and the local time is : ' + body.location.localtime
             });
         }
 });
