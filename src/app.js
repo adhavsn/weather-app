@@ -8,6 +8,7 @@ const forecast = require('./utils/forecast');
 
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 const publicDirPath = path.join(__dirname,  '../public');
 const viewsPath = path.join(__dirname,  '../templates/views');
@@ -60,7 +61,7 @@ app.get('*', (req, res)=>{
     res.render('pageNotFound', {title: 'Error', author: 'Nadavarasu', errorMesg: '404 Page not found!'});
 });
 
-app.listen(3000, ()=> {
-    console.log('Webserver started at port 3000');
+app.listen(port, ()=> {
+    console.log('Webserver started at port ' + port);
 
 });
